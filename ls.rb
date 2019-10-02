@@ -146,4 +146,24 @@ def same_first_last(list)
     return false
 end
 
-puts same_first_last([1,3,4,1])
+# puts same_first_last([1,3,4,1])
+
+def threed(list)
+    x = 0
+    i = 0
+    list.each do |c|
+        if c == 3
+            if list[i+1] == 3
+                return false
+            end
+            x += 1
+        end
+        i += 1
+    end
+    if x == 3
+        return true
+    end
+    return false
+end
+
+puts threed([3,1,3,1,3])
