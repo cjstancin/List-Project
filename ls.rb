@@ -66,14 +66,6 @@ end
 
 # print shift_left([1,2,3,4,7,8,9])
 
-def get_sandwich(str)
-    (str.size-1).times do |c|
-        slice = str[c..c+4]
-        if slice == "bread" 
-            return 
-        end
-    end
-end
 
 # puts get_sandwich("breadpoopbread")
 
@@ -167,3 +159,29 @@ def threed(list)
 end
 
 puts threed([3,1,3,1,3])
+
+def get_sandwich(str)
+    got_milk = false
+    in_between = ""
+    bread_count = 0
+    (str.size-4).times do |n|
+        if str[n..n+4] == 'bread'
+            bread_count += 1
+        end
+    end
+    if bread_count != 2
+        return ""
+    end
+    str.size.times do |c|
+        slice = str[c..c+4]
+        if slice == "bread"
+            got_milk = !got_milk
+        end
+        if got_milk == true
+            in_between += str[c]
+        end
+    end
+    return in_between[5...in_between.size]
+end
+
+puts get_sandwich("breadbread")
