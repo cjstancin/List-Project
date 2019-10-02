@@ -29,22 +29,7 @@ end
 # puts g_happy("Aggabg")
 
 def merge(ls1,ls2)
-    ls1_item1 = 0
-    ls1_item2 = 1
-    ls2_item1 = 0
-    ls2_item2 = 1
-    memory = 0
-    ls1.size.times do
-        if ls1[ls1_item1] > list[list_item2]
-            memory = list[list_item2]
-            list[list_item2] = list[list_item1] 
-            list[list_item1] = memory
-            list_item2 = list_item1 + 1
-        else
-            list_item2 = list_item2 + 1
-        end
-    end
-    list_item1 = list_item1 + 1
+    new_list = []
     new_list = ls1 + ls2
     return new_list 
 end
@@ -151,4 +136,14 @@ def can_balance(list)
     return false
 end
 
-print can_balance([1,2,3,3,2,1])
+# print can_balance([1,2,7,6,11,2,2,1])
+
+def same_first_last(list)
+    puts list.size
+    if ((list.size) >= 1 ) &&  (list[0] == list[list.size-1])
+        return true
+    end
+    return false
+end
+
+puts same_first_last([1,3,4,1])
