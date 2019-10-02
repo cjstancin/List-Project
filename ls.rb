@@ -67,7 +67,6 @@ end
 # print shift_left([1,2,3,4,7,8,9])
 
 
-# puts get_sandwich("breadpoopbread")
 
 def either24(list)
     x = 0
@@ -184,4 +183,4 @@ def get_sandwich(str)
     return in_between[5...in_between.size]
 end
 
-puts get_sandwich("breadbread")
+# puts get_sandwich("breadbread")
