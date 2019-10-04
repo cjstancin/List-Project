@@ -157,7 +157,7 @@ def threed(list)
     return false
 end
 
-puts threed([3,1,3,1,3])
+# puts threed([3,1,3,1,3])
 
 def get_sandwich(str)
     got_milk = false
