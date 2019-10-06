@@ -184,3 +184,7 @@ def get_sandwich(str)
 end
 
 # puts get_sandwich("breadbread")
+
+def athome(ls)
+
+end
