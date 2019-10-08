@@ -17,24 +17,25 @@ end
 # print middle_way([1,2,3],[2,3,74])
 
 def g_happy(str)
-    (str.size-1).times do |c|
-        slice = str[c..c+1] 
-        if slice == "gg" && 
-            puts 
+    str.size.times do |c|
+        slice = str[c]
+        slice2 = str[c+1]
+        slice3 = str[c-1] 
+        if slice == "g" && !(slice2 == "g" || slice3 == "g") 
+            return false
         end
     end
-    return false
+    return true
 end
 
-# puts g_happy("Aggabg")
+# puts g_happy("Aggabgg")
 
 def merge(ls1,ls2)
-    new_list = []
-    new_list = ls1 + ls2
-    return new_list 
+    list = ls1 + ls2
+    return list.sort
 end
 
-# print merge([1,2,3],[4,5,6])
+print merge([1,2,3],[4,5,6])
 
 def count_code(str)
     count = 0
@@ -184,7 +185,3 @@ def get_sandwich(str)
 end
 
 # puts get_sandwich("breadbread")
-
-def athome(ls)
-
-end
